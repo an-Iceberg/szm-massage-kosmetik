@@ -5,5 +5,8 @@ use Phalcon\Mvc\Controller;
 
 class ControllerBase extends Controller
 {
-    // Implement common logic
+  protected function initialize()
+  {
+    $this->tag->appendTitle(' | SzM');
+  }
 }
