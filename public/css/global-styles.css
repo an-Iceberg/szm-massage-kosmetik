@@ -1,4 +1,4 @@
-:not(head, html, style, script) {
+:not(head, html, style, script, svg, path) {
   display: flow-root;
 }
 
@@ -16,17 +16,17 @@
 :root {
   font: 1em "Quicksand", sans-serif;
   scroll-behavior: smooth;
-  --off-white: #f5deb3;
+  --wheat: #f5deb3;
   --blueviolet: #8000ff;
   --medium-purple: #918ef4;
   --trager-blue: #003f61;
   --coral: #ff7f50;
   --salmon: #ff8c69;
-  --transition: all .3s;
+  --transition: all .4s;
 }
 
 body {
-  background-color: var(--off-white);
+  background-color: var(--wheat);
   min-height: 100vh;
 }
 

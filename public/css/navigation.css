@@ -2,20 +2,20 @@ nav {
   position: fixed;
   top: 0;
   right: 0;
-  --icon-size: 60px;
-  --nav-width: 140px;
-  --distance-from-edge: 0px;
-  --border-radius: 18px 0 0 18px;
+  z-index: 999;
+  --nav-width: 180px;
+  --border-radius: 28px 0 0 28px;
+  --link-font-size: 1.5rem;
+  --offset: 50px;
 }
 
 nav > ul {
-  /*padding: 0.5em 0;*/
   background-color: var(--salmon);
   min-width: var(--nav-width);
   position: absolute;
   top: 0;
   right: 0;
-  transform: translateX(calc(var(--nav-width) - 37px));
+  transform: translateX(calc(var(--nav-width) - var(--offset)));
   transition: var(--transition);
   border-radius: var(--border-radius);
 }
@@ -30,8 +30,10 @@ nav a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   transition: var(--transition);
   padding: 0.5em;
+  font-size: var(--link-font-size);
 }
 
 nav a:hover {

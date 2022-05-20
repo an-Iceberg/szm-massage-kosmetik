@@ -1,0 +1,66 @@
+.three-color-section {
+  --gap: 55px;
+  height: 700px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  padding: 0 var(--gap) 50px var(--gap);
+  background-image: linear-gradient(to right, var(--trager-blue) 0% 33.33%, var(--coral) 33.33% 66.66%, var(--medium-purple) 66.66% 100%);
+}
+
+.showcase {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  gap: calc(var(--gap) * 2);
+}
+
+.card {
+  border-radius: 100px;
+  background-color: var(--wheat);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  width: calc(100% / 3);
+  overflow: hidden;
+  padding: 0 40px;
+  transition: var(--transition);
+}
+
+.card::after {
+  padding: 10px;
+  position: absolute;
+  transition: var(--transition);
+}
+
+.card:is(:hover, :focus) {
+  border-radius: 0;
+}
+
+.card:is(:hover, :focus)::after {
+  inset: 0 0 0 0;
+}
+
+.card-1::after {
+  inset: 100% 0 -100% 0;
+  background-color: var(--trager-blue);
+  color: white;
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus. Commodo odio aenean sed adipiscing diam donec adipiscing. Sed tempus urna et pharetra pharetra massa massa ultricies mi. Rhoncus mattis rhoncus urna neque viverra justo nec. At volutpat diam ut venenatis tellus in metus vulputate. Id ornare arcu odio ut sem nulla pharetra. Amet cursus sit amet dictum sit amet justo. Pretium nibh ipsum consequat nisl vel. Amet est placerat in egestas erat imperdiet. Vitae turpis massa sed elementum. A lacus vestibulum sed arcu non odio euismod. Eu ultrices vitae auctor eu augue. Vitae justo eget magna fermentum iaculis eu.';
+}
+
+.card-2::after {
+  inset: 0 100% 0 -100%;
+  background-color: var(--coral);
+  content: 'Amet volutpat consequat mauris nunc congue nisi vitae suscipit. Ultrices gravida dictum fusce ut placerat orci nulla pellentesque. Aliquet eget sit amet tellus cras adipiscing enim. Blandit volutpat maecenas volutpat blandit aliquam. In pellentesque massa placerat duis. Natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. At varius vel pharetra vel turpis. Leo vel orci porta non. Mattis rhoncus urna neque viverra justo nec. Proin gravida hendrerit lectus a. Pretium quam vulputate dignissim suspendisse. Eu non diam phasellus vestibulum. Velit ut tortor pretium viverra suspendisse. In est ante in nibh mauris cursus mattis molestie.';
+}
+
+.card-3::after {
+  inset: -100% 100% 100% -100%;
+  background-color: var(--medium-purple);
+  content: 'Risus quis varius quam quisque id. Dui sapien eget mi proin sed libero enim. Condimentum mattis pellentesque id nibh. Imperdiet nulla malesuada pellentesque elit eget gravida cum sociis natoque. Magna sit amet purus gravida quis blandit turpis. Mauris a diam maecenas sed. Egestas sed tempus urna et pharetra pharetra massa massa ultricies. Viverra nam libero justo laoreet sit amet cursus. At quis risus sed vulputate odio. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet.';
+}
