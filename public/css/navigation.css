@@ -20,6 +20,10 @@ nav > ul {
   border-radius: var(--border-radius);
 }
 
+nav li {
+  display: flow-root;
+}
+
 nav:is(:hover, :focus) > ul {
   transform: translateX(0);
   transition: var(--transition);

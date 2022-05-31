@@ -18,49 +18,98 @@
 }
 
 .card {
-  border-radius: 100px;
-  background-color: var(--wheat);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
   position: relative;
   width: calc(100% / 3);
-  overflow: hidden;
   padding: 0 40px;
-  transition: var(--transition);
+  transform-style: preserve-3d;
 }
 
-.card::after {
-  padding: 10px;
+.card * {
+  transform-style: preserve-3d;
+}
+
+.card-front, .card-back {
+  border-radius: 60px;
   position: absolute;
-  transition: var(--transition);
+  inset: 0;
+  transition: all 1s;
+  backface-visibility: hidden;
 }
 
-.card:is(:hover, :focus) {
-  border-radius: 0;
+.card-front {
+  transform: rotateY(0deg);
+  padding: 40px 60px 60px 60px;
 }
 
-.card:is(:hover, :focus)::after {
-  inset: 0 0 0 0;
+.card-back {
+  transform: rotateY(-180deg);
+  padding: 60px;
 }
 
-.card-1::after {
-  inset: 100% 0 -100% 0;
+.card-front *, .card-back * {
+  transform: translateZ(60px);
+}
+
+.card:is(:hover, :focus) .card-front {
+  transform: rotateY(180deg);
+}
+
+.card:is(:hover, :focus) .card-back {
+  transform: rotateY(0deg);
+}
+
+.card .card-front {
+  background-color: var(--wheat);
+}
+
+.card-1 .card-back {
   background-color: var(--trager-blue);
-  color: white;
-  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus. Commodo odio aenean sed adipiscing diam donec adipiscing. Sed tempus urna et pharetra pharetra massa massa ultricies mi. Rhoncus mattis rhoncus urna neque viverra justo nec. At volutpat diam ut venenatis tellus in metus vulputate. Id ornare arcu odio ut sem nulla pharetra. Amet cursus sit amet dictum sit amet justo. Pretium nibh ipsum consequat nisl vel. Amet est placerat in egestas erat imperdiet. Vitae turpis massa sed elementum. A lacus vestibulum sed arcu non odio euismod. Eu ultrices vitae auctor eu augue. Vitae justo eget magna fermentum iaculis eu.';
+  color: var(--wheat);
 }
 
-.card-2::after {
-  inset: 0 100% 0 -100%;
+.card-2 .card-back {
   background-color: var(--coral);
-  content: 'Amet volutpat consequat mauris nunc congue nisi vitae suscipit. Ultrices gravida dictum fusce ut placerat orci nulla pellentesque. Aliquet eget sit amet tellus cras adipiscing enim. Blandit volutpat maecenas volutpat blandit aliquam. In pellentesque massa placerat duis. Natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. At varius vel pharetra vel turpis. Leo vel orci porta non. Mattis rhoncus urna neque viverra justo nec. Proin gravida hendrerit lectus a. Pretium quam vulputate dignissim suspendisse. Eu non diam phasellus vestibulum. Velit ut tortor pretium viverra suspendisse. In est ante in nibh mauris cursus mattis molestie.';
 }
 
-.card-3::after {
-  inset: -100% 100% 100% -100%;
+.card-3 .card-back {
   background-color: var(--medium-purple);
-  content: 'Risus quis varius quam quisque id. Dui sapien eget mi proin sed libero enim. Condimentum mattis pellentesque id nibh. Imperdiet nulla malesuada pellentesque elit eget gravida cum sociis natoque. Magna sit amet purus gravida quis blandit turpis. Mauris a diam maecenas sed. Egestas sed tempus urna et pharetra pharetra massa massa ultricies. Viverra nam libero justo laoreet sit amet cursus. At quis risus sed vulputate odio. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet.';
+}
+
+.card .card-front::before {
+  content: '';
+  position: absolute;
+  inset: 20px;
+  border: 1px solid;
+  border-radius: 40px;
+  transform: translateZ(30px);
+}
+
+.card .card-back::before {
+  border-color: var(--wheat);
+}
+
+.card .card-front::before {
+  border-color: #000;
+}
+
+hr {
+  border: 1px solid;
+}
+
+.card-1 hr {
+  border-color: var(--trager-blue);
+}
+
+.card-2 hr {
+  border-color: var(--coral);
+}
+
+.card-3 hr {
+  border-color: var(--medium-purple);
+}
+
+.card h1 {
+  text-align: center;
+  font-size: 3rem;
 }

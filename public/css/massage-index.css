@@ -1,0 +1,11 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cell {
+  margin: 1.875em;
+  padding: 1.875em;
+  border-radius: 2.5em;
+  border: 1px solid #000;
+}

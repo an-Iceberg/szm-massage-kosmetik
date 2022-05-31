@@ -45,11 +45,10 @@ function printNavElement($url, $thisPage, $pageNumber, $image, $text)
   </head>
   <body>
     <nav>
-      <!-- <img src="<?= $this->url->get('img/bars.svg') ?>" alt="" class="menu-symbol"> -->
 
       <ul>
         <?php printNavElement('/', $this->view->page, 0, $this->url->get('img/home.svg'), 'SzM') ?>
-        <?php printNavElement('/trager', $this->view->page, 1, $this->url->get('img/trager.svg'), 'Trager') ?>
+        <?php printNavElement('/trager', $this->view->page, 1, $this->url->get('img/trager.svg'), 'Trager&reg;') ?>
         <?php printNavElement('/massage', $this->view->page, 2, $this->url->get('img/massage.svg'), 'Massage') ?>
         <?php printNavElement('/kosmetik', $this->view->page, 3, $this->url->get('img/cosmetics.svg'), 'Kosmetik') ?>
         <?php printNavElement('/uebermich', $this->view->page, 4, $this->url->get('img/person.svg'), 'Über&nbsp;mich') ?>
