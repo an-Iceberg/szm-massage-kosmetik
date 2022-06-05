@@ -1,3 +1,18 @@
 footer {
-  background-image: linear-gradient(to right, var(--blueviolet), var(--coral));
+  background-image: linear-gradient(to right, var(--trager-color), var(--massage-color), var(--kosmetik-color));
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem 0;
+  font-size: 1.25em;
+}
+
+footer > div {
+  display: flex;
+  flex-direction: column;
+  color: var(--light-text-color);
+}
+
+footer a {
+  color: var(--light-text-color);
 }

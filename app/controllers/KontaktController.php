@@ -8,7 +8,7 @@ class KontaktController extends ControllerBase
   {
     $this->tag->setTitle('Kontakt');
 
-    $this->view->page = 6;
+    $this->view->page = 7;
   }
 
 }

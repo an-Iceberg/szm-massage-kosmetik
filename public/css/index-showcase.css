@@ -5,7 +5,7 @@
   align-items: stretch;
   justify-content: center;
   padding: 0 var(--gap) 50px var(--gap);
-  background-image: linear-gradient(to right, var(--trager-blue) 0% 33.33%, var(--coral) 33.33% 66.66%, var(--medium-purple) 66.66% 100%);
+  background-image: linear-gradient(to right, var(--trager-color) 0% 33.33%, var(--massage-color) 33.33% 66.66%, var(--kosmetik-color) 66.66% 100%);
 }
 
 .showcase {
@@ -59,38 +59,26 @@
   transform: rotateY(0deg);
 }
 
-.card .card-front {
-  background-color: var(--wheat);
-}
-
 .card-1 .card-back {
-  background-color: var(--trager-blue);
-  color: var(--wheat);
+  background-color: var(--trager-color);
+  color: var(--light-text-color);
 }
 
 .card-2 .card-back {
-  background-color: var(--coral);
+  background-color: var(--massage-color);
 }
 
 .card-3 .card-back {
-  background-color: var(--medium-purple);
+  background-color: var(--kosmetik-color);
 }
 
 .card .card-front::before {
   content: '';
   position: absolute;
   inset: 20px;
-  border: 1px solid;
   border-radius: 40px;
+  background-color: var(--bg-color);
   transform: translateZ(30px);
-}
-
-.card .card-back::before {
-  border-color: var(--wheat);
-}
-
-.card .card-front::before {
-  border-color: #000;
 }
 
 hr {
@@ -98,18 +86,60 @@ hr {
 }
 
 .card-1 hr {
-  border-color: var(--trager-blue);
+  border-color: var(--trager-color);
 }
 
 .card-2 hr {
-  border-color: var(--coral);
+  border-color: var(--massage-color);
 }
 
 .card-3 hr {
-  border-color: var(--medium-purple);
+  border-color: var(--kosmetik-color);
 }
 
 .card h1 {
   text-align: center;
   font-size: 3rem;
+}
+
+.card-1 .card-front {
+  background-image: conic-gradient(
+    var(--bg-color) 0deg 20deg,
+    var(--trager-color) 35deg 45deg,
+    var(--bg-color) 60deg 120deg,
+    var(--trager-color) 135deg 145deg,
+    var(--bg-color) 160deg 200deg,
+    var(--trager-color) 215deg 225deg,
+    var(--bg-color) 240deg 300deg,
+    var(--trager-color) 315deg 325deg,
+    var(--bg-color) 340deg 360deg
+  );
+}
+
+.card-2 .card-front {
+  background-image: conic-gradient(
+    var(--bg-color) 0deg 20deg,
+    var(--massage-color) 35deg 45deg,
+    var(--bg-color) 60deg 120deg,
+    var(--massage-color) 135deg 145deg,
+    var(--bg-color) 160deg 200deg,
+    var(--massage-color) 215deg 225deg,
+    var(--bg-color) 240deg 300deg,
+    var(--massage-color) 315deg 325deg,
+    var(--bg-color) 340deg 360deg
+  );
+}
+
+.card-3 .card-front {
+  background-image: conic-gradient(
+    var(--bg-color) 0deg 20deg,
+    var(--kosmetik-color) 35deg 45deg,
+    var(--bg-color) 60deg 120deg,
+    var(--kosmetik-color) 135deg 145deg,
+    var(--bg-color) 160deg 200deg,
+    var(--kosmetik-color) 215deg 225deg,
+    var(--bg-color) 240deg 300deg,
+    var(--kosmetik-color) 315deg 325deg,
+    var(--bg-color) 340deg 360deg
+  );
 }

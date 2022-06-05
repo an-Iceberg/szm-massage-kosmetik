@@ -16,19 +16,18 @@
 :root {
   font: 1em "Quicksand", sans-serif;
   scroll-behavior: smooth;
-  --wheat: #f5deb3;
-  --blueviolet: #8000ff;
-  --medium-purple: #918ef4;
-  --trager-blue: #003f61;
-  --coral: #ff7f50;
-  --salmon: #ff8c69;
-  --light-blue: #50d0ff;
-  --light-green: #50ff7f;
+  --kosmetik-color: #d9939b;
+  --massage-color: #e2725b;
+  --trager-color: #003f61;
+  --bg-color: wheat;
+  --dark-text-color: #4b4437;
+  --light-text-color: var(--bg-color);
   --transition: all .4s;
+  color: var(--dark-text-color);
 }
 
 body {
-  background-color: var(--wheat);
+  background-color: var(--bg-color);
   min-height: 100vh;
 }
 
@@ -42,7 +41,7 @@ a {
 }
 
 a:is(:not(:visited), :visited) {
-  color: #000;
+  color: var(--dark-text-color);
 }
 
 li {

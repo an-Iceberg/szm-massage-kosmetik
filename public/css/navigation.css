@@ -10,7 +10,7 @@ nav {
 }
 
 nav > ul {
-  background-color: var(--salmon);
+  background-color: coral;
   min-width: var(--nav-width);
   position: absolute;
   top: 0;

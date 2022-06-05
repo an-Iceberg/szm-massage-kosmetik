@@ -12,7 +12,7 @@ function printNavElement($url, $thisPage, $pageNumber, $image, $text)
   echo "
   <li>
     <a href=\"$url\" class=\"$currentPage\">
-      <img src=\"$image\" alt=\"\" height=\"28\">
+      <img src=\"$image\" alt=\"\" height=\"28\" width=\"28\">
       $text
     </a>
   </li>
@@ -45,7 +45,6 @@ function printNavElement($url, $thisPage, $pageNumber, $image, $text)
   </head>
   <body>
     <nav>
-
       <ul>
         <?php printNavElement('/', $this->view->page, 0, $this->url->get('img/home.svg'), 'SzM') ?>
         <?php printNavElement('/trager', $this->view->page, 1, $this->url->get('img/trager.svg'), 'Trager&reg;') ?>
@@ -53,7 +52,8 @@ function printNavElement($url, $thisPage, $pageNumber, $image, $text)
         <?php printNavElement('/kosmetik', $this->view->page, 3, $this->url->get('img/cosmetics.svg'), 'Kosmetik') ?>
         <?php printNavElement('/uebermich', $this->view->page, 4, $this->url->get('img/person.svg'), 'Über&nbsp;mich') ?>
         <?php printNavElement('/gutschein', $this->view->page, 5, $this->url->get('img/check.svg'), 'Gutschein') ?>
-        <?php printNavElement('/kontakt', $this->view->page, 6, $this->url->get('img/contact.svg'), 'Kontakt') ?>
+        <?php printNavElement('/termin', $this->view->page, 6, $this->url->get('img/calendar.svg'), 'Termin') ?>
+        <?php printNavElement('/kontakt', $this->view->page, 7, $this->url->get('img/contact.svg'), 'Kontakt') ?>
       </ul>
     </nav>
 
@@ -62,7 +62,24 @@ function printNavElement($url, $thisPage, $pageNumber, $image, $text)
     </main>
 
     <footer>
-      <h1>Footer</h1>
+      <div class="angebote">
+        <h2>Angebote</h2>
+        <a href="/trager">Trager&reg;</a>
+        <a href="/massage">Massage</a>
+        <a href="/kosmetik">Kosmetik</a>
+      </div>
+
+      <div>
+        <h2>Weiteres</h2>
+        <a href="/gutschein">Gutscheine</a>
+        <a href="/termin">Termin buchen</a>
+        <a href="/kontakt">Kontakt</a>
+      </div>
+
+      <div>
+        <h2>&nbsp;</h2>
+        <a href="/uebermich">Über mich</a>
+      </div>
     </footer>
 
     <?php // JS ?>

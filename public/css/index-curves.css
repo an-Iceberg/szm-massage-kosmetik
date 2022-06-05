@@ -1,12 +1,9 @@
 .curves {
-  --curve-height: 60%;
-  --curve-width: 100px;
-  --curve-step: 25px;
-  --curve-end-height: 87%;
+  background-image: url('../img/salon1.jpeg');
   background-attachment: fixed;
-  background-size: calc(100% - (var(--curve-width) * 3) - 80px);
   background-repeat: no-repeat;
-  background-position: 100% 50%;
+  background-size: calc(100% - 248px);
+  background-position: bottom right;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -19,7 +16,6 @@
   height: 100%;
 }
 
-/* not using clip-path because that isn't responsive */
 .curve-1 {
   width: 33.33%;
   z-index: 3;
@@ -36,13 +32,13 @@
 }
 
 #curve-1 path {
-  fill: var(--trager-blue);
+  fill: var(--trager-color);
 }
 
 #curve-2 path {
-  fill: var(--coral);
+  fill: var(--massage-color);
 }
 
 #curve-3 path {
-  fill: var(--medium-purple);
+  fill: var(--kosmetik-color);
 }
