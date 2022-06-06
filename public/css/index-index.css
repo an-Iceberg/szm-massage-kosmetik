@@ -1,2 +1,25 @@
 @import url('index-curves.css');
 @import url('index-showcase.css');
+
+.transition1 {
+  background-image: linear-gradient(to right, var(--trager-color) 0% 33.33%, var(--massage-color) 33.33% 66.66%, var(--kosmetik-color) 66.66% 100%);
+}
+
+.transition1 img {
+  width: 100%;
+  height: 500px;
+}
+
+.location {
+  height: 600px;
+  background-color: var(--bg-color);
+  padding: 0 0 5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.location iframe {
+  width: 1000px;
+  height: 100%;
+}

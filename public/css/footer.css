@@ -1,18 +1,28 @@
-footer {
+#footer {
   background-image: linear-gradient(to right, var(--trager-color), var(--massage-color), var(--kosmetik-color));
   display: flex;
-  justify-content: center;
-  gap: 3rem;
-  padding: 2rem 0;
-  font-size: 1.25em;
+  justify-content: space-evenly;
+  /*gap: 3rem;*/
+  padding: 2rem 6rem;
 }
 
-footer > div {
+#footer * {
+  font-size: 1.125em;
+  font-style: normal;
+  color: var(--light-text-color);
+}
+
+#footer > div {
   display: flex;
   flex-direction: column;
+}
+
+#footer a {
+  display: block;
+  text-decoration: underline;
   color: var(--light-text-color);
 }
 
-footer a {
-  color: var(--light-text-color);
+#footer h2 {
+  font-size: 1.4em;
 }

@@ -44,7 +44,7 @@ function printNavElement($url, $thisPage, $pageNumber, $image, $text)
     <?= $this->assets->outputCss() ?>
   </head>
   <body>
-    <nav>
+    <nav id="nav">
       <ul>
         <?php printNavElement('/', $this->view->page, 0, $this->url->get('img/home.svg'), 'SzM') ?>
         <?php printNavElement('/trager', $this->view->page, 1, $this->url->get('img/trager.svg'), 'Trager&reg;') ?>
@@ -61,8 +61,17 @@ function printNavElement($url, $thisPage, $pageNumber, $image, $text)
       <?= $this->getContent() ?>
     </main>
 
-    <footer>
-      <div class="angebote">
+    <footer id="footer">
+      <address>
+        <a href="/"><h2>SzM</h2></a>
+        <div>Szilvia Marosi</div>
+        <div>Selnaustrasse 15</div>
+        <div>8001 Zürich</div>
+        <a href="tel:0794257491">📞 +41(0)79 425 74 91</a>
+        <a href="mailto:szmmassage@gmail.com">📧 szmmassage@gmail.com</a>
+      </address>
+
+      <div>
         <h2>Angebote</h2>
         <a href="/trager">Trager&reg;</a>
         <a href="/massage">Massage</a>
@@ -79,6 +88,7 @@ function printNavElement($url, $thisPage, $pageNumber, $image, $text)
       <div>
         <h2>&nbsp;</h2>
         <a href="/uebermich">Über mich</a>
+        <a href="/uebermich/bildergallerie">Bildergallerie</a>
       </div>
     </footer>
 

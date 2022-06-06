@@ -1,4 +1,4 @@
-nav {
+#nav {
   position: fixed;
   top: 0;
   right: 0;
@@ -9,7 +9,7 @@ nav {
   --offset: 50px;
 }
 
-nav > ul {
+#nav > ul {
   background-color: coral;
   min-width: var(--nav-width);
   position: absolute;
@@ -20,16 +20,17 @@ nav > ul {
   border-radius: var(--border-radius);
 }
 
-nav li {
+#nav li {
   display: flow-root;
 }
 
-nav:is(:hover, :focus) > ul {
+#nav:is(:hover, :focus) > ul {
   transform: translateX(0);
   transition: var(--transition);
 }
 
-nav a {
+#nav a {
+  text-decoration: none;
   border-radius: var(--border-radius);
   display: flex;
   flex-direction: row;
@@ -40,7 +41,7 @@ nav a {
   font-size: var(--link-font-size);
 }
 
-nav a:hover {
+#nav a:hover {
   background-color: white;
   transition: var(--transition);
 }

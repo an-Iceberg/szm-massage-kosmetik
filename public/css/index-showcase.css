@@ -4,9 +4,17 @@
   display: flex;
   align-items: stretch;
   justify-content: center;
-  padding: 0 var(--gap) 50px var(--gap);
+  padding: 80px var(--gap) 0px var(--gap);
   background-image: linear-gradient(to right, var(--trager-color) 0% 33.33%, var(--massage-color) 33.33% 66.66%, var(--kosmetik-color) 66.66% 100%);
 }
+
+/*@media (hover: hover) {
+
+}
+
+@media (hover: none) {
+
+}*/
 
 .showcase {
   flex-grow: 1;

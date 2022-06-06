@@ -13,6 +13,11 @@
   src: url('../fonts/Quicksand-VariableFont_wght.ttf') format("truetype");
 }
 
+@font-face {
+  font-family: "Monotype Corsiva";
+  src: url('../fonts/Monotype_Corsiva.TTF') format("truetype");
+}
+
 :root {
   font: 1em "Quicksand", sans-serif;
   scroll-behavior: smooth;
@@ -40,7 +45,8 @@ a {
   display: inline;
 }
 
-a:is(:not(:visited), :visited) {
+/* :where() removes specificity */
+:where(a:is(:not(:visited), :visited)) {
   color: var(--dark-text-color);
 }
 

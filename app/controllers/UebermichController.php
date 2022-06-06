@@ -11,4 +11,10 @@ class UebermichController extends ControllerBase
     $this->view->page = 4;
   }
 
+  public function bildergallerieAction()
+  {
+    $this->tag->setTitle('Bildergallerie');
+
+    $this->view->page = 4;
+  }
 }
