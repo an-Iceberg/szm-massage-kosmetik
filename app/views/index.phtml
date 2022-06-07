@@ -1,24 +1,3 @@
-<?php
-
-function printNavElement($url, $thisPage, $pageNumber, $image, $text)
-{
-  $currentPage = '';
-
-  if ($thisPage == $pageNumber)
-  {
-    $currentPage = 'current-page';
-  }
-
-  echo "
-  <li>
-    <a href=\"$url\" class=\"$currentPage\">
-      <img src=\"$image\" alt=\"\" height=\"28\" width=\"28\">
-      $text
-    </a>
-  </li>
-  ";
-}
-?>
 <!DOCTYPE html>
 <html lang="de">
   <head>
@@ -44,20 +23,10 @@ function printNavElement($url, $thisPage, $pageNumber, $image, $text)
     <?= $this->assets->outputCss() ?>
   </head>
   <body>
-    <nav id="nav">
-      <ul>
-        <?php printNavElement('/', $this->view->page, 0, $this->url->get('img/home.svg'), 'SzM') ?>
-        <?php printNavElement('/trager', $this->view->page, 1, $this->url->get('img/trager.svg'), 'Trager&reg;') ?>
-        <?php printNavElement('/massage', $this->view->page, 2, $this->url->get('img/massage.svg'), 'Massage') ?>
-        <?php printNavElement('/kosmetik', $this->view->page, 3, $this->url->get('img/cosmetics.svg'), 'Kosmetik') ?>
-        <?php printNavElement('/uebermich', $this->view->page, 4, $this->url->get('img/person.svg'), 'Über&nbsp;mich') ?>
-        <?php printNavElement('/gutschein', $this->view->page, 5, $this->url->get('img/check.svg'), 'Gutschein') ?>
-        <?php printNavElement('/termin', $this->view->page, 6, $this->url->get('img/calendar.svg'), 'Termin') ?>
-        <?php printNavElement('/kontakt', $this->view->page, 7, $this->url->get('img/contact.svg'), 'Kontakt') ?>
-      </ul>
-    </nav>
+    <?php $this->partial('partials/nav'); ?>
 
     <main id="main">
+      <?php // TODO: add logo ?>
       <?= $this->getContent() ?>
     </main>
 
