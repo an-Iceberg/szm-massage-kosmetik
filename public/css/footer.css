@@ -1,5 +1,11 @@
 #footer {
-  background-image: linear-gradient(to right, var(--trager-color), var(--massage-color), var(--kosmetik-color));
+  background-image:
+    linear-gradient(
+      to right,
+      var(--trager-color),
+      var(--massage-color),
+      var(--kosmetik-color)
+    );
   display: flex;
   justify-content: space-evenly;
   /*gap: 3rem;*/

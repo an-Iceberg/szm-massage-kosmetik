@@ -5,16 +5,14 @@
   align-items: stretch;
   justify-content: center;
   padding: 80px var(--gap) 0px var(--gap);
-  background-image: linear-gradient(to right, var(--trager-color) 0% 33.33%, var(--massage-color) 33.33% 66.66%, var(--kosmetik-color) 66.66% 100%);
+  background-image:
+    linear-gradient(
+      to right,
+      var(--trager-color) 0% 33.33%,
+      var(--massage-color) 33.33% 66.66%,
+      var(--kosmetik-color) 66.66% 100%
+    );
 }
-
-/*@media (hover: hover) {
-
-}
-
-@media (hover: none) {
-
-}*/
 
 .showcase {
   flex-grow: 1;
@@ -26,7 +24,6 @@
 }
 
 .card {
-  cursor: pointer;
   position: relative;
   width: calc(100% / 3);
   padding: 0 40px;
@@ -38,7 +35,6 @@
 }
 
 .card-front, .card-back {
-  border-radius: 60px;
   position: absolute;
   inset: 0;
   transition: all 1s;
@@ -46,37 +42,78 @@
 }
 
 .card-front {
+  border-radius: 60px;
   transform: rotateY(0deg);
   padding: 40px 60px 60px 60px;
 }
 
 .card-back {
+  /*border: 1px solid #000;*/
   transform: rotateY(-180deg);
-  padding: 60px;
+  border-radius: 0;
 }
 
 .card-front *, .card-back * {
-  transform: translateZ(60px);
+  transform: translateZ(50px);
 }
 
-.card:is(:hover, :focus) .card-front {
+.card .card-front button {
+  font: 1.5em "Quicksand", sans-serif;
+  margin: 100% auto 0 auto;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  background-color: var(--dark-text-color);
+  color: var(--light-text-color);
+  border: none;
+  transform: translateZ(100px);
+  text-decoration: underline;
+}
+
+.card .card-back ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  height: 100%;
+}
+
+#trager-card .card-back ul {
+  justify-content: space-evenly;
+}
+
+.card .card-back li {
+  list-style-type: none;
+  border-radius: 50px;
+}
+
+.card .card-back a {
+  font-size: 2rem;
+  text-decoration-line: underline;
+  text-decoration-color: var(--bg-color);
+}
+
+.card.turned .card-front {
   transform: rotateY(180deg);
 }
 
-.card:is(:hover, :focus) .card-back {
+.card.turned .card-back {
   transform: rotateY(0deg);
 }
 
-.card-1 .card-back {
+#trager-card .card-back {
   background-color: var(--trager-color);
   color: var(--light-text-color);
 }
 
-.card-2 .card-back {
+#trager-card .card-back * {
+  color: var(--light-text-color);
+}
+
+#massage-card .card-back {
   background-color: var(--massage-color);
 }
 
-.card-3 .card-back {
+#kosmetik-card .card-back {
   background-color: var(--kosmetik-color);
 }
 
@@ -86,68 +123,72 @@
   inset: 20px;
   border-radius: 40px;
   background-color: var(--bg-color);
-  transform: translateZ(30px);
+  transform: translateZ(50px);
 }
 
 hr {
   border: 1px solid;
 }
 
-.card-1 hr {
+#trager-card hr {
   border-color: var(--trager-color);
 }
 
-.card-2 hr {
+#massage-card hr {
   border-color: var(--massage-color);
 }
 
-.card-3 hr {
+#kosmetik-card hr {
   border-color: var(--kosmetik-color);
 }
 
 .card h1 {
   text-align: center;
   font-size: 3rem;
+  transform: translateZ(100px);
 }
 
-.card-1 .card-front {
-  background-image: conic-gradient(
-    var(--bg-color) 0deg 20deg,
-    var(--trager-color) 35deg 45deg,
-    var(--bg-color) 60deg 120deg,
-    var(--trager-color) 135deg 145deg,
-    var(--bg-color) 160deg 200deg,
-    var(--trager-color) 215deg 225deg,
-    var(--bg-color) 240deg 300deg,
-    var(--trager-color) 315deg 325deg,
-    var(--bg-color) 340deg 360deg
-  );
+#trager-card .card-front {
+  background-image:
+    conic-gradient(
+      var(--bg-color) 0deg 20deg,
+      var(--trager-color) 35deg 45deg,
+      var(--bg-color) 60deg 120deg,
+      var(--trager-color) 135deg 145deg,
+      var(--bg-color) 160deg 200deg,
+      var(--trager-color) 215deg 225deg,
+      var(--bg-color) 240deg 300deg,
+      var(--trager-color) 315deg 325deg,
+      var(--bg-color) 340deg 360deg
+    );
 }
 
-.card-2 .card-front {
-  background-image: conic-gradient(
-    var(--bg-color) 0deg 20deg,
-    var(--massage-color) 35deg 45deg,
-    var(--bg-color) 60deg 120deg,
-    var(--massage-color) 135deg 145deg,
-    var(--bg-color) 160deg 200deg,
-    var(--massage-color) 215deg 225deg,
-    var(--bg-color) 240deg 300deg,
-    var(--massage-color) 315deg 325deg,
-    var(--bg-color) 340deg 360deg
-  );
+#massage-card .card-front {
+  background-image:
+    conic-gradient(
+      var(--bg-color) 0deg 20deg,
+      var(--massage-color) 35deg 45deg,
+      var(--bg-color) 60deg 120deg,
+      var(--massage-color) 135deg 145deg,
+      var(--bg-color) 160deg 200deg,
+      var(--massage-color) 215deg 225deg,
+      var(--bg-color) 240deg 300deg,
+      var(--massage-color) 315deg 325deg,
+      var(--bg-color) 340deg 360deg
+    );
 }
 
-.card-3 .card-front {
-  background-image: conic-gradient(
-    var(--bg-color) 0deg 20deg,
-    var(--kosmetik-color) 35deg 45deg,
-    var(--bg-color) 60deg 120deg,
-    var(--kosmetik-color) 135deg 145deg,
-    var(--bg-color) 160deg 200deg,
-    var(--kosmetik-color) 215deg 225deg,
-    var(--bg-color) 240deg 300deg,
-    var(--kosmetik-color) 315deg 325deg,
-    var(--bg-color) 340deg 360deg
-  );
+#kosmetik-card .card-front {
+  background-image:
+    conic-gradient(
+      var(--bg-color) 0deg 20deg,
+      var(--kosmetik-color) 35deg 45deg,
+      var(--bg-color) 60deg 120deg,
+      var(--kosmetik-color) 135deg 145deg,
+      var(--bg-color) 160deg 200deg,
+      var(--kosmetik-color) 215deg 225deg,
+      var(--bg-color) 240deg 300deg,
+      var(--kosmetik-color) 315deg 325deg,
+      var(--bg-color) 340deg 360deg
+    );
 }

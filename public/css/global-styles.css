@@ -21,6 +21,7 @@
 :root {
   font: 1em "Quicksand", sans-serif;
   scroll-behavior: smooth;
+  scroll-padding-top: 1.875rem;
   --kosmetik-color: #d9939b;
   --massage-color: #e2725b;
   --trager-color: #003f61;
@@ -45,7 +46,6 @@ a {
   display: inline;
 }
 
-/* :where() removes specificity */
 :where(a:is(:not(:visited), :visited)) {
   color: var(--dark-text-color);
 }

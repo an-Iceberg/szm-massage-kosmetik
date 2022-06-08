@@ -1,3 +1,4 @@
+/* TODO: rework navigation */
 #nav {
   position: fixed;
   top: 0;
@@ -44,7 +45,7 @@
 
 #nav .current-page {
   background-color: #fd63ff;
-  color: #ffffff;
+  color: var(--light-text-color);
 }
 
 #nav .current-page svg,
@@ -54,7 +55,7 @@
 
 #nav a:hover:not(.current-page) {
   background-color: #808080;
-  color: #ffffff;
+  color: var(--light-text-color);
   transition: var(--transition);
 }
 
