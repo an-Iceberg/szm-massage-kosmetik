@@ -1,8 +1,8 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.875rem;
-  padding: 1.875rem;
+  gap: 1.875em;
+  padding: 1.875em;
   background-color: var(--kosmetik-color);
 }
 

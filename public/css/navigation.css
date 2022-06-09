@@ -1,126 +1,91 @@
-/* TODO: rework navigation */
 #nav {
+  /*border: 1px solid #000;*/
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 999;
-  --nav-width: 180px;
-  --border-radius: 28px 0 0 28px;
-  --link-font-size: 1.5rem;
-  --offset: 50px;
-}
-
-#nav > ul {
-  background-color: #1d1c32;
-  min-width: var(--nav-width);
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translateX(calc(var(--nav-width) - var(--offset)));
+  background-color: var(--bg-color);
+  font-size: 1.25rem;
+  width: 180px;
+  transform: translateX(180px);
   transition: var(--transition);
-  border-radius: var(--border-radius);
+  z-index: 999;
 }
 
 #nav li {
   display: flow-root;
+  cursor: pointer;
 }
 
-#nav:is(:hover, :focus) > ul {
-  transform: translateX(0);
-  transition: var(--transition);
-}
-
-#nav a {
-  color: #808080;
-  text-decoration: none;
-  border-radius: var(--border-radius);
+#nav :where(a) {
+  color: var(--dark-text-color);
+  text-decoration: underline;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   transition: var(--transition);
   padding: 0.5em;
-  font-size: var(--link-font-size);
+  font-size: 1.5rem;
 }
 
-#nav .current-page {
-  background-color: #fd63ff;
-  color: var(--light-text-color);
-}
-
-#nav .current-page svg,
-#nav .current-page svg path {
-  fill: #000000;
-}
-
-#nav a:hover:not(.current-page) {
-  background-color: #808080;
-  color: var(--light-text-color);
+#nav.open {
+  transform: translateX(0);
   transition: var(--transition);
 }
 
-#nav a:hover:not(.current-page) svg,
-#nav a:hover:not(.current-page) svg path{
-  fill: #fd63ff;
-  transition: var(--transition);
+#menu-icon {
+  display: block;
+  position: fixed;
+  top: 10px;
+  right: 12px;
+  z-index: 999;
+  cursor: pointer;
 }
 
-#nav :where(:not(.current-page)) svg,
-#nav :where(:not(.current-page)) svg path {
-  fill: #808080;
-  transition: var(--transition);
+#close-container {
+  width: 100%;
+  padding-top: 0.5em;
+  padding-right: 0.5em;
+  display: flex;
+  justify-content: end;
 }
 
-#nav #home-link:hover svg,
-#nav #home-link:hover svg path {
-  fill: var(--bg-color);
+#close-nav {
+  cursor: pointer;
 }
 
-#nav #trager-link:hover svg,
-#nav #trager-link:hover svg path {
-  fill: var(--trager-color);
-}
-
-#nav #massage-link:hover svg,
-#nav #massage-link:hover svg path {
-  fill: var(--massage-color);
-}
-
-#nav #kosmetik-link:hover svg,
-#nav #kosmetik-link:hover svg path {
-  fill: var(--kosmetik-color);
-}
-
-#nav #home-link.current-page svg,
-#nav #home-link.current-page svg path,
-#nav #massage-link.current-page svg,
-#nav #massage-link.current-page svg path,
-#nav #kosmetik-link.current-page svg,
-#nav #kosmetik-link.current-page svg path {
-  fill: #000000;
-}
-
-#nav #trager-link.current-page svg,
-#nav #trager-link.current-page svg path {
-  fill: #ffffff;
-}
-
-#nav #home-link.current-page {
-  color: #000000;
-}
-
-#nav #home-link.current-page {
-  background-color: var(--bg-color);
-}
-
-#nav #trager-link.current-page {
+#trager-link {
   background-color: var(--trager-color);
 }
 
-#nav #massage-link.current-page {
+#trager-link {
+  color: var(--bg-color);
+}
+
+#trager-link path {
+  fill: var(--bg-color);
+}
+
+#massage-link {
   background-color: var(--massage-color);
 }
 
-#nav #kosmetik-link.current-page {
+#massage-link {
+  color: var(--bg-color);
+}
+
+#massage-link path {
+  fill: var(--bg-color)
+}
+
+#kosmetik-link {
   background-color: var(--kosmetik-color);
+}
+
+#kosmetik-link {
+  color: var(--bg-color);
+}
+
+#kosmetik-link :is(path, rect, polygon) {
+  fill: var(--bg-color)
 }

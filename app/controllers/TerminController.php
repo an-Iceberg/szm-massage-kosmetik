@@ -10,6 +10,8 @@ class TerminController extends ControllerBase
 
     $this->assets->addCss('css/termin-index.css');
 
+    $this->assets->addCss('css/remove-logo.css');
+
     $this->view->page = 6;
   }
 

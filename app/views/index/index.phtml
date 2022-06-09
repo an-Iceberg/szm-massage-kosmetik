@@ -85,18 +85,18 @@
 
       // If the user clicks outside of the 3 cards all of them get turned back to normal
       document.querySelector("body").addEventListener("pointerdown", event => {
-        if (!trager_card.contains(event.target))
-        {
+        event.preventDefault()
+        event.stopPropagation()
+
+        if (!trager_card.contains(event.target)) {
           trager_card.classList.remove("turned")
         }
 
-        if (!massage_card.contains(event.target))
-        {
+        if (!massage_card.contains(event.target)) {
           massage_card.classList.remove("turned")
         }
 
-        if (!kosmetik_card.contains(event.target))
-        {
+        if (!kosmetik_card.contains(event.target)) {
           kosmetik_card.classList.remove("turned")
         }
       })

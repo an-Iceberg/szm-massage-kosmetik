@@ -14,7 +14,7 @@
 .location {
   height: 600px;
   background-color: var(--bg-color);
-  padding: 0 0 5rem 0;
+  padding: 0 0 5em 0;
   display: flex;
   justify-content: center;
   align-items: center;

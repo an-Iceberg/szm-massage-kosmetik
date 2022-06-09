@@ -19,7 +19,7 @@
 }
 
 :root {
-  font: 1em "Quicksand", sans-serif;
+  font: 1rem "Quicksand", sans-serif;
   scroll-behavior: smooth;
   scroll-padding-top: 1.875rem;
   --kosmetik-color: #d9939b;
@@ -32,7 +32,18 @@
   color: var(--dark-text-color);
 }
 
+::selection {
+  background-color: var(--dark-text-color);
+  color: var(--light-text-color);
+}
+
+::-moz-selection {
+  background-color: var(--dark-text-color);
+  color: var(--light-text-color);
+}
+
 body {
+  position: relative;
   background-color: var(--bg-color);
   min-height: 100vh;
 }
@@ -60,4 +71,23 @@ q::before {
 
 q::after {
   content: '»';
+}
+
+#szm-logo {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: var(--bg-color);
+  font: 5rem "Monotype Corsiva", serif;
+  width: 240px;
+  display: flex;
+  justify-content: space-around;
+  z-index: 999;
+}
+
+#szm-logo > div {
+  width: calc(100% / 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
