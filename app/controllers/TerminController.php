@@ -4,7 +4,7 @@ declare(strict_types=1);
 class TerminController extends ControllerBase
 {
 
-  public function indexAction()
+  public function indexAction($kategorie = "", $behandlung = "")
   {
     $this->tag->setTitle('Termin Buchen');
 
@@ -13,6 +13,10 @@ class TerminController extends ControllerBase
     $this->assets->addCss('css/remove-logo.css');
 
     $this->view->page = 6;
+
+    $this->view->behandlung = $behandlung;
+
+    $this->view->kategorie = $kategorie;
   }
 
 }

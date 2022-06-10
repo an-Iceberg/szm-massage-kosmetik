@@ -12,6 +12,12 @@
   background-color: var(--bg-color);
 }
 
+.cell .cell-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
 .curve {
   height: 100vh;
   width: 100%;
@@ -19,4 +25,49 @@
 
 #curve {
   fill: var(--kosmetik-color);
+}
+
+.cell-content {
+  transition: var(--transition);
+  margin-bottom: 3em;
+}
+
+.hide {
+  display: none;
+  transition: var(--transition);
+}
+
+.grid .cell .h3 {
+  margin-top: 1em;
+  margin-bottom: 0.25em;
+}
+
+.grid .cell p {
+  text-align: justify;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons button,
+.buttons a {
+  font: 1.5rem "Quicksand", sans-serif;
+  padding: 0.5em 1em;
+  border-radius: 3.125em;
+  color: var(--light-text-color);
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.buttons a {
+  background-color: var(--dark-text-color);
+}
+
+.buttons button {
+  border: 1px solid var(--dark-text-color);
+  color: var(--dark-text-color);
+  background-color: var(--bg-color);
 }
