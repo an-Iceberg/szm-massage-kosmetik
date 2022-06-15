@@ -84,7 +84,7 @@
       const kosmetik_card = document.querySelector("#kosmetik-card")
 
       // If the user clicks outside of the 3 cards all of them get turned back to normal
-      document.querySelector("body").addEventListener("pointerdown", event => {
+      document.querySelector("body").addEventListener("pointerdown", (event) => {
         event.preventDefault()
         event.stopPropagation()
 
@@ -102,7 +102,7 @@
       })
 
       // Clicking the button on the Trager card turns it over and turns all other cards back to normal
-      document.querySelector("#trager-button").addEventListener("pointerdown", event => {
+      document.querySelector("#trager-button").addEventListener("pointerdown", (event) => {
         event.preventDefault()
         event.stopPropagation()
 
@@ -118,7 +118,7 @@
       })
 
       // Clicking the button on the Massage card turns it over and turns all other cards back to normal
-      document.querySelector("#massage-button").addEventListener("pointerdown", event => {
+      document.querySelector("#massage-button").addEventListener("pointerdown", (event) => {
         event.preventDefault()
         event.stopPropagation()
 
@@ -134,7 +134,7 @@
       })
 
       // Clicking the button on the Kosmetik card turns it over and turns all other cards back to normal
-      document.querySelector("#kosmetik-button").addEventListener("pointerdown", event => {
+      document.querySelector("#kosmetik-button").addEventListener("pointerdown", (event) => {
         event.preventDefault()
         event.stopPropagation()
 

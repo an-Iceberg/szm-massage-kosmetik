@@ -213,7 +213,7 @@
   const buttons = document.querySelectorAll(".buttons button")
 
   buttons.forEach(button => {
-    button.addEventListener("pointerdown", event => {
+    button.addEventListener("pointerdown", (event) => {
       event.preventDefault()
       event.stopPropagation()
 
