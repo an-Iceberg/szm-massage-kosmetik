@@ -1,0 +1,11 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "name": "phalcon_db",
+      "database": "${workspaceFolder:szm-massage-kosmetik}/app/database/database.sqlite"
+    }
+  ],
+  "sqltools.useNodeRuntime": true
+}
