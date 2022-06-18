@@ -10,6 +10,9 @@
   padding: 1.875em;
   border-radius: 2.5em;
   background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .cell .cell-title {
@@ -47,6 +50,8 @@
 }
 
 .buttons {
+  width: 100%;
+  margin-top: auto;
   display: flex;
   justify-content: space-around;
 }
@@ -70,4 +75,16 @@
   border: 1px solid var(--dark-text-color);
   color: var(--dark-text-color);
   background-color: var(--bg-color);
+}
+
+@media only screen and (min-width: 1280px) {
+  .buttons button {
+    display: none;
+  }
+
+  .hide {
+    display: flow-root;
+    max-height: 500px;
+    overflow-y: auto;
+  }
 }
