@@ -2,6 +2,7 @@
   --gap: 3.4375em;
   height: 43.75em;
   display: flex;
+  flex-direction: row;
   align-items: stretch;
   justify-content: center;
   padding: 5em var(--gap) 0em var(--gap);
@@ -45,10 +46,11 @@
   border-radius: 3.75em;
   transform: rotateY(0deg);
   padding: 2.5em 3.75em 3.75em 3.75em;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-back {
-  /*border: 1px solid #000;*/
   transform: rotateY(-180deg);
   border-radius: 0;
 }
@@ -59,7 +61,8 @@
 
 .card .card-front button {
   font: 1.5rem "Quicksand", sans-serif;
-  margin: 100% auto 0 auto;
+  margin-top: auto;
+  margin-bottom: 0;
   padding: 0.5em 1em;
   border-radius: 3.125em;
   background-color: var(--dark-text-color);
@@ -143,6 +146,18 @@ hr {
   border-color: var(--kosmetik-color);
 }
 
+#trager-card ul {
+  background-color: var(--trager-color);
+}
+
+#massage-card ul {
+  background-color: var(--massage-color);
+}
+
+#kosmetik-card ul {
+  background-color: var(--kosmetik-color);
+}
+
 .card h1 {
   text-align: center;
   font-size: 3rem;
@@ -192,4 +207,69 @@ hr {
       var(--kosmetik-color) 315deg 325deg,
       var(--bg-color) 340deg 360deg
     );
+}
+
+@media screen and (max-width: 1450px) {
+  .three-color-section {
+    --height: 2000px;
+    flex-direction: column;
+    height: var(--height);
+    padding: 0;
+    background-image:
+      linear-gradient(
+        to bottom,
+        var(--trager-color) 0% 33.33%,
+        var(--massage-color) 33.33% 66.66%,
+        var(--kosmetik-color) 66.66% 100%
+      );
+  }
+
+  .showcase {
+    flex-direction: column;
+    align-items: center;
+    gap: unset;
+  }
+
+  .card {
+    height: calc((var(--height) / 3) - 3em);
+    width: min(calc(100% - 2em), 500px);
+  }
+}
+
+@media screen and (max-width: 370px) {
+  #trager-card .card-front {
+    background-image: none;
+    background-color: var(--bg-color);
+  }
+
+  #massage-card .card-front {
+    background-image: none;
+    background-color: var(--bg-color);
+  }
+
+  #kosmetik-card .card-front {
+    background-image: none;
+    background-color: var(--bg-color);
+  }
+
+  .card {
+    padding: 0 1.5em;
+  }
+
+  .card .card-front {
+    padding: 1em;
+    border-radius: 2.5em;
+  }
+
+  .card .card-front h1 {
+    font-size: 2.5rem;
+  }
+
+  .card .card-front button {
+    font-size: 1.25rem;
+  }
+
+  .card .card-back a {
+    font-size: 1.5rem;
+  }
 }

@@ -24,3 +24,13 @@
   width: 1000px;
   height: 100%;
 }
+
+@media screen and (max-width: 1450px) {
+  .location {
+    padding: 5em 0;
+  }
+
+  .transition1 {
+    display: none;
+  }
+}
