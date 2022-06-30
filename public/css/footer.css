@@ -1,4 +1,4 @@
-#footer {
+footer {
   background-image:
     linear-gradient(
       to right,
@@ -12,23 +12,23 @@
   padding: 2em 6em;
 }
 
-#footer * {
+footer * {
   font-size: 1.25rem;
   font-style: normal;
   color: var(--light-text-color);
 }
 
-#footer > div {
+footer > div {
   display: flex;
   flex-direction: column;
 }
 
-#footer a {
+footer a {
   display: block;
   text-decoration: underline;
   color: var(--light-text-color);
 }
 
-#footer h2 {
+footer h2 {
   font-size: 1.6rem;
 }

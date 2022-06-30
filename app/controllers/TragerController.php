@@ -10,7 +10,7 @@ class TragerController extends ControllerBase
 
     $this->assets->addCss('css/trager-index.css');
 
-    $this->view->page = 1;
+    $this->view->page = "trager";
   }
 
 }

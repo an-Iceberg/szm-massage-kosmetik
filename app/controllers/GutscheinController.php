@@ -10,7 +10,7 @@ class GutscheinController extends ControllerBase
 
     $this->assets->addCss('css/remove-logo.css');
 
-    $this->view->page = 5;
+    $this->view->page = "gutschein";
   }
 
 }

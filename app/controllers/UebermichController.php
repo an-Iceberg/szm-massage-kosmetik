@@ -10,7 +10,7 @@ class UebermichController extends ControllerBase
 
     $this->assets->addCss('css/remove-logo.css');
 
-    $this->view->page = 4;
+    $this->view->page = "uebermich";
   }
 
   public function bildergallerieAction()
@@ -19,6 +19,6 @@ class UebermichController extends ControllerBase
 
     $this->assets->addCss('css/remove-logo.css');
 
-    $this->view->page = 4;
+    $this->view->page = "uebermich";
   }
 }

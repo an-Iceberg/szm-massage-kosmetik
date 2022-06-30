@@ -1,0 +1,35 @@
+// TODO: media queries
+footer {
+  background-image: linear-gradient(
+    to right,
+    var(--trager-color),
+    var(--massage-color),
+    var(--kosmetik-color)
+  );
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  // gap: 3rem
+  padding: 2em 6em;
+
+  * {
+    font-size: 1.25rem;
+    font-style: normal;
+    color: var(--light-text-color);
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  a {
+    display: block;
+    text-decoration: underline;
+    color: var(--light-text-color);
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+}

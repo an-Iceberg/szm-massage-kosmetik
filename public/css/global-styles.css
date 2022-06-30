@@ -1,4 +1,4 @@
-/* TODO: rework everything with either SCSS or LESS */
+/* TODO: rework everything with SCSS */
 :not(head, html, style, script, svg, path, li) {
   display: flow-root;
 }
@@ -22,6 +22,7 @@
 :root {
   font: 1rem "Quicksand", sans-serif;
   scroll-behavior: smooth;
+  overflow-y: auto;
   scroll-padding-top: 1.875rem;
   --kosmetik-color: #d9939b;
   --massage-color: #e2725b;
@@ -33,12 +34,7 @@
   color: var(--dark-text-color);
 }
 
-::selection {
-  background-color: var(--dark-text-color);
-  color: var(--light-text-color);
-}
-
-::-moz-selection {
+::selection, ::-moz-selection {
   background-color: var(--dark-text-color);
   color: var(--light-text-color);
 }

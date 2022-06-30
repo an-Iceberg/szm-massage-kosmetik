@@ -10,7 +10,7 @@ class KontaktController extends ControllerBase
 
     $this->assets->addCss('css/remove-logo.css');
 
-    $this->view->page = 7;
+    $this->view->page = "kontakt";
   }
 
 }

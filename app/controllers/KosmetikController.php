@@ -10,7 +10,7 @@ class KosmetikController extends ControllerBase
 
     $this->assets->addCss('css/kosmetik-index.css');
 
-    $this->view->page = 3;
+    $this->view->page = "kosmetik";
   }
 
 }

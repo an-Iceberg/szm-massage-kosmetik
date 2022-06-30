@@ -12,7 +12,7 @@ class TerminController extends ControllerBase
 
     $this->assets->addCss('css/remove-logo.css');
 
-    $this->view->page = 6;
+    $this->view->page = "termin";
 
     $this->view->behandlung = $behandlung;
 

@@ -10,7 +10,7 @@ class MassageController extends ControllerBase
 
     $this->assets->addCss('css/massage-index.css');
 
-    $this->view->page = 2;
+    $this->view->page = "massage";
   }
 
 }

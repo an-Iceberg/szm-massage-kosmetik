@@ -210,6 +210,10 @@ hr {
 }
 
 @media screen and (max-width: 1450px) {
+  .curve-1, .curve-2, .curve-3 {
+    display: none;
+  }
+
   .three-color-section {
     --height: 2000px;
     flex-direction: column;
@@ -233,6 +237,20 @@ hr {
   .card {
     height: calc((var(--height) / 3) - 3em);
     width: min(calc(100% - 2em), 500px);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .three-color-section {
+    --height: 1500px;
+  }
+
+  .card {
+    height: 450px;
+  }
+
+  .card .card-back a {
+    font-size: 1.5rem;
   }
 }
 
@@ -267,9 +285,5 @@ hr {
 
   .card .card-front button {
     font-size: 1.25rem;
-  }
-
-  .card .card-back a {
-    font-size: 1.5rem;
   }
 }

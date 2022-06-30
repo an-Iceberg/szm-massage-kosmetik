@@ -1,0 +1,16 @@
+#kosmetik {
+  .curve {
+    height: 100vh;
+    width: 100%;
+
+    #curve {
+      fill: var(--kosmetik-color);
+    }
+  }
+
+  .grid {
+    background-color: var(--kosmetik-color);
+    @import "../mixins/grid";
+    @include grid;
+  }
+}
