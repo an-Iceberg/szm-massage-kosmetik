@@ -68,11 +68,7 @@ $di->setShared('db', function () {
 
   $class = 'Phalcon\Db\Adapter\Pdo\\' . $config->database->adapter;
   $params = [
-    'host'     => $config->database->host,
-    'username' => $config->database->username,
-    'password' => $config->database->password,
-    'dbname'   => $config->database->dbname,
-    'charset'  => $config->database->charset
+    'dbname' => $config->database->dbname
   ];
 
   if ($config->database->adapter == 'Postgresql') {
@@ -81,7 +77,6 @@ $di->setShared('db', function () {
 
   return new $class($params);
 });
-
 
 /**
  * If the configuration specify the use of metadata adapter use it or use memory otherwise

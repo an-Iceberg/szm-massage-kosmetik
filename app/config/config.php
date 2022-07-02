@@ -7,15 +7,10 @@
 defined('BASE_PATH') || define('BASE_PATH', getenv('BASE_PATH') ?: realpath(dirname(__FILE__) . '/../..'));
 defined('APP_PATH') || define('APP_PATH', BASE_PATH . '/app');
 
-// TODO: we're using an SQLite db now
 return new \Phalcon\Config([
   'database' => [
-    'adapter'     => 'Mysql',
-    'host'        => 'localhost',
-    'username'    => 'root',
-    'password'    => '',
-    'dbname'      => 'test',
-    'charset'     => 'utf8',
+    'adapter'     => 'SQLite',
+    'dbname' => APP_PATH . '/database/database.sqlite'
   ],
   'application' => [
     'appDir'         => APP_PATH . '/',

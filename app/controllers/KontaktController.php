@@ -8,8 +8,6 @@ class KontaktController extends ControllerBase
   {
     $this->tag->setTitle('Kontakt');
 
-    $this->assets->addCss('css/remove-logo.css');
-
     $this->view->page = "kontakt";
   }
 

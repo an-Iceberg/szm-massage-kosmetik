@@ -8,8 +8,6 @@ class TragerController extends ControllerBase
   {
     $this->tag->setTitle('Trager');
 
-    $this->assets->addCss('css/trager-index.css');
-
     $this->view->page = "trager";
   }
 

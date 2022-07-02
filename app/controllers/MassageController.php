@@ -8,8 +8,6 @@ class MassageController extends ControllerBase
   {
     $this->tag->setTitle('Massage');
 
-    $this->assets->addCss('css/massage-index.css');
-
     $this->view->page = "massage";
   }
 

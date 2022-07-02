@@ -139,33 +139,3 @@
   </ul>
 </nav>
 
-<script>
-  // This little script makes the nav appear/disappear
-  const nav = document.querySelector("nav")
-
-  // Opens the menu when clicking the menu icon
-  document.querySelector("#menu-icon").addEventListener("pointerdown", event => {
-    event.preventDefault()
-    event.stopPropagation()
-
-    nav.classList.add("open")
-  })
-
-  // Closes the menu when clicking the X
-  document.querySelector("#close-nav").addEventListener("pointerdown", event => {
-    event.preventDefault()
-    event.stopPropagation()
-
-    nav.classList.remove("open")
-  })
-
-  // Closes the menu when clicking outside the menu
-  document.querySelector("body").addEventListener("pointerdown", event => {
-    event.preventDefault()
-    event.stopPropagation()
-
-    if (!nav.contains(event.target)) {
-      nav.classList.remove("open")
-    }
-  })
-</script>

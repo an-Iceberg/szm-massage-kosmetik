@@ -8,8 +8,6 @@ class KosmetikController extends ControllerBase
   {
     $this->tag->setTitle('Kosmetik');
 
-    $this->assets->addCss('css/kosmetik-index.css');
-
     $this->view->page = "kosmetik";
   }
 

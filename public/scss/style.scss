@@ -8,7 +8,7 @@
   src: url('../fonts/monotype_corsiva.ttf') format("truetype");
 }
 
-:not(head, html, style, script, svg, path, li) {
+:not(head, html, style, script, svg, path, li, table, tr, td) {
   display: flow-root;
 }
 

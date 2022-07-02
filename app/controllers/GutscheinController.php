@@ -8,8 +8,6 @@ class GutscheinController extends ControllerBase
   {
     $this->tag->setTitle('Gutschein');
 
-    $this->assets->addCss('css/remove-logo.css');
-
     $this->view->page = "gutschein";
   }
 

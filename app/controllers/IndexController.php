@@ -8,8 +8,6 @@ class IndexController extends ControllerBase
   {
     $this->tag->setTitle('Home');
 
-    $this->assets->addCss('css/index-index.css');
-
     $this->view->page = "home";
   }
 

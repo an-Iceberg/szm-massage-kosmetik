@@ -1,0 +1,22 @@
+#termin {
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 245px;
+    gap: 5px;
+
+    label {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      input {
+        overflow-x: hidden;
+
+        &[type="submit"] {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
