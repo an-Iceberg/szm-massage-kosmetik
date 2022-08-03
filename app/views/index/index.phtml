@@ -31,8 +31,9 @@
 
       <div class="card-back">
         <ul>
-          <li><a href="/trager#trager">Trager&reg;</a></li>
-          <li><a href="/trager#mentastic">Mentastic</a></li>
+          <?php // TODO: ids are no longer names but numbers ?>
+          <li><a href="/trager#0">Trager&reg;</a></li>
+          <li><a href="/trager#1">Mentastic</a></li>
         </ul>
       </div>
     </div>
@@ -46,11 +47,11 @@
 
       <div class="card-back">
         <ul>
-          <li><a href="/massage#klassische-massage">Klassische Massage</a></li>
-          <li><a href="/massage#ruecken-nackenmassage">Rücken- und Nachenmassage</a></li>
-          <li><a href="/massage#schroepfen">Schröpfen</a></li>
-          <li><a href="/massage#schmerz">Schmerztherapie nach Liebscher & Bracht</a></li>
-          <li><a href="/massage#fussreflexzonenmassage">Fussreflex&shy;zonenmassage</a></li>
+          <li><a href="/massage#2">Klassische Massage</a></li>
+          <li><a href="/massage#3">Rücken- und Nachenmassage</a></li>
+          <li><a href="/massage#4">Schröpfen</a></li>
+          <li><a href="/massage#5">Schmerztherapie nach Liebscher & Bracht</a></li>
+          <li><a href="/massage#6">Fussreflex&shy;zonenmassage</a></li>
         </ul>
       </div>
     </div>
@@ -64,15 +65,15 @@
 
       <div class="card-back">
         <ul>
-          <li><a href="/kosmetik#fusspflege">Fusspflege</a></li>
-          <li><a href="/kosmetik#medizinische-kosmetik">Medizinische Kosmetik</a></li>
-          <li><a href="/kosmetik#aknebehandlung">Aknebehandlung</a></li>
-          <li><a href="/kosmetik#antiaging">AntiAging</a></li>
-          <li><a href="/kosmetik#mikrodermabrasion">Mikro&shy;dermabrasion</a></li>
-          <li><a href="/kosmetik#microneedling">Microneedling</a></li>
-          <li><a href="/kosmetik#klassische-kosmetik">Klassische Kosmetik</a></li>
-          <li><a href="/kosmetik#manicure">Manicure</a></li>
-          <li><a href="/kosmeitk#phyto-cell-behandlugn">Phyto-Cell Behandlung</a></li>
+          <li><a href="/kosmetik#7">Fusspflege</a></li>
+          <li><a href="/kosmetik#8">Medizinische Kosmetik</a></li>
+          <li><a href="/kosmetik#9">Aknebehandlung</a></li>
+          <li><a href="/kosmetik#10">AntiAging</a></li>
+          <li><a href="/kosmetik#11">Mikro&shy;dermabrasion</a></li>
+          <li><a href="/kosmetik#12">Microneedling</a></li>
+          <li><a href="/kosmetik#13">Klassische Kosmetik</a></li>
+          <li><a href="/kosmetik#14">Manicure</a></li>
+          <li><a href="/kosmeitk#15">Phyto-Cell Behandlung</a></li>
         </ul>
       </div>
     </div>
@@ -85,7 +86,6 @@
 
       // If the user clicks outside of the 3 cards all of them get turned back to normal
       document.querySelector("#home").addEventListener("pointerdown", (event) => {
-        event.preventDefault()
         event.stopPropagation()
 
         if (!trager_card.contains(event.target)) {
@@ -103,7 +103,6 @@
 
       // Clicking the button on the Trager card turns it over and turns all other cards back to normal
       document.querySelector("#trager-button").addEventListener("pointerdown", (event) => {
-        event.preventDefault()
         event.stopPropagation()
 
         trager_card.classList.add("turned")
@@ -119,7 +118,6 @@
 
       // Clicking the button on the Massage card turns it over and turns all other cards back to normal
       document.querySelector("#massage-button").addEventListener("pointerdown", (event) => {
-        event.preventDefault()
         event.stopPropagation()
 
         massage_card.classList.add("turned")
@@ -135,7 +133,6 @@
 
       // Clicking the button on the Kosmetik card turns it over and turns all other cards back to normal
       document.querySelector("#kosmetik-button").addEventListener("pointerdown", (event) => {
-        event.preventDefault()
         event.stopPropagation()
 
         kosmetik_card.classList.add("turned")

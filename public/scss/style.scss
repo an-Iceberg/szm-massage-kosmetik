@@ -17,6 +17,8 @@
   color: var(--light-text-color);
 }
 
+// XXX: min width for desktop: 1280px
+
 :root {
   font: 1rem "quicksand", sans-serif;
   scroll-behavior: smooth;
@@ -91,5 +93,6 @@ body {
     min-height: 100vh;
   }
 
+  // TODO: replace these with mixins
   @import "partials/footer", "partials/navigation", "pages";
 }

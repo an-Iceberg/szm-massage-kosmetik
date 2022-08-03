@@ -9,8 +9,12 @@ defined('APP_PATH') || define('APP_PATH', BASE_PATH . '/app');
 
 return new \Phalcon\Config([
   'database' => [
-    'adapter'     => 'SQLite',
-    'dbname' => APP_PATH . '/database/database.sqlite'
+    'adapter' => 'Mysql',
+    'host' => 'localhost',
+    'username' => 'root',
+    'password' => '',
+    'dbname' => 'szm_database',
+    // 'charset' => 'utf8'
   ],
   'application' => [
     'appDir'         => APP_PATH . '/',

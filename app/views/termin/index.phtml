@@ -1,107 +1,13 @@
-<?php // TODO: find good date picker and implement this using AJAX and SQLite ?>
+<?php // TODO: find good date picker and implement id with AJAX ?>
+<?php // TODO: consider usnig Alpine.js ?>
 <h1>Termin buchen</h1>
-
-<p><?= $this->view->kategorie ?></p>
 
 <p><?= $this->view->behandlung ?></p>
 
-<table>
-  <tr>
-    <td>ID</td>
-    <td><?= $this->view->termin['id'] ?? "" ?></td>
-  </tr>
+<pre>
+  <?php foreach ($this->view->example as $key => $value) { ?>
 
-  <tr>
-    <td>Datum</td>
-    <td><?= $this->view->termin['datum'] ?? "" ?></td>
-  </tr>
+  <?= $key ?>: <?= gettype($value) == 'array' ? '['.implode(',', $value).']' : $value ?>
 
-  <tr>
-    <td>Bereich</td>
-    <td><?= $this->view->termin['bereich'] ?? "" ?></td>
-  </tr>
-
-  <tr>
-    <td>Behandlung</td>
-    <td><?= $this->view->termin['behandlung'] ?? "" ?></td>
-  </tr>
-
-  <tr>
-    <td>Vorname</td>
-    <td><?= $this->view->termin['vorname'] ?? "" ?></td>
-  </tr>
-
-  <tr>
-    <td>Nachname</td>
-    <td><?= $this->view->termin['nachname'] ?? "" ?></td>
-  </tr>
-
-  <tr>
-    <td>E-Mail</td>
-    <td><?= $this->view->termin['email'] ?? "" ?></td>
-  </tr>
-
-  <tr>
-    <td>Telefon</td>
-    <td><?= $this->view->termin['telefon'] ?? "" ?></td>
-  </tr>
-</table>
-
-<hr>
-
-<form action="/termin/index" method="post">
-  <label>Datum
-    <input type="date" name="datum">
-  </label>
-
-  <label>Behandlung
-    <select name="behandlung">
-      <option value="" selected disabled>Bitte wählen...</option>
-
-      <optgroup label="Trager">
-        <option value="trager">Trager</option>
-        <option value="mentastic">Mentastic</option>
-      </optgroup>
-
-      <optgroup label="Massage">
-        <option value="klassische_massage">Klassische Massage</option>
-        <option value="ruecken_und_nacken">Rücken- und Nackenmassage</option>
-        <option value="schroepfen">Schröpfen</option>
-        <option value="liebscher&bracht">Schmerztherapie nach Liebscher & Bracht</option>
-        <option value="fussreflex">Fussreflexzonenmassage</option>
-      </optgroup>
-
-      <optgroup label="Kosmetik">
-        <option value="fusspflege">Fusspflege</option>
-        <option value="medizinisch">Medizinische Kosmetik</option>
-        <option value="akne">Aknebehandlung</option>
-        <option value="antiaging">AntiAging</option>
-        <option value="mikrodermabrasion">Mikrodermabrasion</option>
-        <option value="microneedling">Microneedling</option>
-        <option value="phyto-cell">Phyto-Cell Behandlung</option>
-        <option value="klassische_kosmetik">Klassische Kosmetik</option>
-        <option value="manicure">Manicure</option>
-      </optgroup>
-    </select>
-  </label>
-
-  <label>Vorname
-    <input type="text" name="vorname">
-  </label>
-
-  <label>Nachname
-    <input type="text" name="nachname">
-  </label>
-
-  <label>E-Mail
-    <input type="email" name="email">
-  </label>
-
-  <label>Telefon
-    <input type="tel" name="telefon">
-  </label>
-
-  <label>
-    <input type="submit" value="Submit">
-  </label>
-</form>
+  <?php } ?>
+</pre>

@@ -23,8 +23,6 @@
     <link rel="stylesheet" href="<?= $this->url->get('css/style.css'); ?>">
   </head>
 
-  <?php // TODO: implement SASS ?>
-  <?php // TODO: add different id's to the main element for different pages ?>
   <?php // TODO: add logo ?>
   <body>
     <!--<div id="szm-logo">
@@ -38,37 +36,6 @@
     <main id="<?= $this->view->page ?>">
       <?= $this->getContent() ?>
     </main>
-
-    <script>
-      // This little script makes the nav appear/disappear
-      const nav = document.querySelector("nav")
-
-      // Opens the menu when clicking the menu icon
-      document.querySelector("#menu-icon").addEventListener("pointerdown", event => {
-        event.preventDefault()
-        event.stopPropagation()
-
-        nav.classList.add("open")
-      })
-
-      // Closes the menu when clicking the X
-      document.querySelector("#close-nav").addEventListener("pointerdown", event => {
-        event.preventDefault()
-        event.stopPropagation()
-
-        nav.classList.remove("open")
-      })
-
-      // Closes the menu when clicking outside the menu
-      document.querySelector("body").addEventListener("pointerdown", event => {
-        // event.preventDefault()
-        event.stopPropagation()
-
-        if (!nav.contains(event.target)) {
-          nav.classList.remove("open")
-        }
-      })
-    </script>
 
     <footer>
       <address>
@@ -102,6 +69,43 @@
     </footer>
   </body>
 </html>
+
+<script>
+  // This little script makes the nav appear/disappear
+  const nav = document.querySelector("nav")
+
+  // Opens the menu when clicking the menu icon
+  document.querySelector("#menu-icon").addEventListener("pointerdown", event => {
+    event.stopPropagation()
+
+    nav.classList.add("open")
+  })
+
+  // Closes the menu when clicking the X
+  document.querySelector("#close-nav").addEventListener("pointerdown", event => {
+    event.stopPropagation()
+
+    nav.classList.remove("open")
+  })
+
+  // Closes the menu when clicking outside the menu
+  document.querySelector("body").addEventListener("pointerdown", event => {
+    event.stopPropagation()
+
+    if (!nav.contains(event.target)) {
+      nav.classList.remove("open")
+    }
+  })
+
+  // Closes the menu when clicking outside the menu
+  document.querySelector("main").addEventListener("pointerdown", event => {
+    event.stopPropagation()
+
+    if (!nav.contains(event.target)) {
+      nav.classList.remove("open")
+    }
+  })
+</script>
 
 <?php // JS ?>
 <?= $this->assets->outputJs() ?>

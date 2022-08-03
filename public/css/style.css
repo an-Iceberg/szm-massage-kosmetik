@@ -538,22 +538,5 @@ body #kosmetik .grid .cell .buttons button {
 body #kosmetik .grid .cell .buttons a {
   background-color: var(--dark-text-color);
 }
-body #termin form {
-  display: flex;
-  flex-direction: column;
-  width: 245px;
-  gap: 5px;
-}
-body #termin form label {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-body #termin form label input {
-  overflow-x: hidden;
-}
-body #termin form label input[type=submit] {
-  width: 100%;
-}
 
 /*# sourceMappingURL=style.css.map */

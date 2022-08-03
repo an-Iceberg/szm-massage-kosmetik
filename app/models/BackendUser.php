@@ -1,13 +1,24 @@
 <?php
 
-class Login extends \Phalcon\Mvc\Model
+class BackendUser extends \Phalcon\Mvc\Model
 {
+  /**
+   *
+   * @var integer
+   */
+  public $id;
 
   /**
    *
    * @var string
    */
-  public $user;
+  public $authorization_token;
+
+  /**
+   *
+   * @var string
+   */
+  public $name;
 
   /**
    *
@@ -20,14 +31,15 @@ class Login extends \Phalcon\Mvc\Model
    */
   public function initialize()
   {
-    $this->setSource("login");
+    $this->setSchema("szm_database");
+    $this->setSource("backend_user");
   }
 
   /**
    * Allows to query a set of records that match the specified conditions
    *
    * @param mixed $parameters
-   * @return Login[]|Login|\Phalcon\Mvc\Model\ResultSetInterface
+   * @return BackendUser[]|BackendUser|\Phalcon\Mvc\Model\ResultSetInterface
    */
   public static function find($parameters = null): \Phalcon\Mvc\Model\ResultsetInterface
   {
@@ -38,11 +50,10 @@ class Login extends \Phalcon\Mvc\Model
    * Allows to query the first record that match the specified conditions
    *
    * @param mixed $parameters
-   * @return Login|\Phalcon\Mvc\Model\ResultInterface|\Phalcon\Mvc\ModelInterface|null
+   * @return BackendUser|\Phalcon\Mvc\Model\ResultInterface|\Phalcon\Mvc\ModelInterface|null
    */
   public static function findFirst($parameters = null): ?\Phalcon\Mvc\ModelInterface
   {
     return parent::findFirst($parameters);
   }
-
 }
