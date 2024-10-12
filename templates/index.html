@@ -1,0 +1,23 @@
+{% include "head.html" %}
+
+<body>
+
+{% include "navbar.html" %}
+
+{# {% include "nav.html" %} #}
+
+<div class="container-xxl">
+
+{% include "header.html" %}
+
+<div x-data="{ open:false }">
+  <button x-on:click.stop="open = !open" x-bind:class="!open ? 'btn-primary' : 'btn-secondary'" class="btn btn-sm">Toggle</button>
+  <span x-show="open">Content…</span>
+  <span x-text="`open: ${open}`"></span>
+</div>
+
+{% include "footer.html" %}
+
+</div>
+
+</body>
