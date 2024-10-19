@@ -2,7 +2,7 @@ mod routes;
 
 use actix_files::Files;
 use actix_web::{App, HttpServer};
-use routes::{index, ueber_mich};
+use routes::{angebot, buchung, gutschein, index, kontakt, standort, ueber_mich};
 use tera::Tera;
 use lazy_static::lazy_static;
 
@@ -32,7 +32,12 @@ async fn main() -> std::io::Result<()>
   {
     App::new()
       .service(index)
+      .service(buchung)
       .service(ueber_mich)
+      .service(standort)
+      .service(angebot)
+      .service(gutschein)
+      .service(kontakt)
       .service(Files::new("/", "./static"))
   })
   .bind(("127.0.0.1", 8080))?
