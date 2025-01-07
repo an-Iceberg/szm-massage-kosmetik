@@ -1,0 +1,26 @@
+{% include "partials/head.html" %}
+
+<body>
+
+{% include "partials/navbar.html" %}
+
+{# {% include "nav.html" %} #}
+
+<div class="container-xxl">
+
+{# {% include "partials/header.html" %} #}
+
+<div class="mb-3">
+  <label for="blog_title" class="form-label">Blog title</label>
+  <input type="text" class="form-control" id="blog_title">
+</div>
+<div class="mb-3">
+  <label for="blog_text" class="form-label">Blog text</label>
+  <textarea class="form-control" id="blog_text" rows="3"></textarea>
+</div>
+
+{% include "partials/footer.html" %}
+
+</div>
+
+</body>

@@ -10,33 +10,6 @@
 
 {% include "partials/header.html" %}
 
-<div class="bg-primary-subtle text-center rounded-5 px-3 py-2 mb-2">
-  <figure>
-    <blockquote class="blockquote">
-      <p class="h3">«Ein Paar empfindsame, kundige Hände können emotionale und körperliche Not lindern.»</p>
-    </blockquote>
-    <figcaption class="blockquote-footer">
-      Dean Juhan, <cite title="Source Title">Source Title</cite>
-    </figcaption>
-  </figure>
-</div>
-
-<p>Beginnt Ihr Tag mit Schmerzen?</p>
-<p>Leben Sie mit Verspannungen?</p>
-<br>
-<p>Lösen Sie sich.</p>
-<p>Lassen Sie Entspannung zu.</p>
-<p>Lassen Sie sich wieder ins Gleichgewicht bringen.</p>
-<br>
-<p>Ich helfe Ihnen dabei.</p>
-<p>Meine Behandlungen finden in ruhiger Atmosphäre statt, in meiner zentral gelegenen Praxis mit Aussicht auf den alten botanischen Garten.</p>
-
-<div class="row align-items-center">
-  <div class="alert alert-info text-center col-md-6 offset-md-3">
-    Die Behandlungen sind von vielen Krankenkassen anerkannt.
-  </div>
-</div>
-
 <hr>
 
 <div x-data="{ open:false }">
@@ -44,6 +17,8 @@
   <span x-show="open">Content…</span>
   <span x-text="`open: ${open}`"></span>
 </div>
+
+<hr>
 
 {% include "partials/footer.html" %}
 
